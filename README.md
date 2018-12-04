@@ -1,8 +1,8 @@
 # Full stack developer - angular weather app
-This project will likely take up to two hours. You are not timed and can take as long as you wish to complete this project. You'll be creating a new angular project, interacting with a third party API and displaying the data. Finally you'll introduce some user friendly elements to the app.
-1. Create a new branch (name it after you). 
+You are not timed and can take as long as you wish to complete this project. You'll be creating a new angular project, interacting with a third party API and displaying the response in a table. Finally you'll introduce some user friendly elements to the app.
+1. Create a new branch (name it after you) or create a publicly accessible repo. 
 2. Create a new angular project with the features specified in this document
-3. Commit the weather app to your branch.
+3. Submit your branch/repo for review
 
 # Instructions
 1. Create a new angular project
