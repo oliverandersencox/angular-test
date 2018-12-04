@@ -5,13 +5,18 @@ This project will likely take up to two hours. You are not timed and can take as
 3. Commit the weather app to your branch.
 
 # Instructions
-1. Read through this document
-2. Create a new angular project
-3. Use the open weather API to retrieve weather information on at least 10 cities
-4. Populate a table within the app with this data
-5. Introduce configurable pagination (rows of 5, 10, 20)
-6. Introduce sortable columns
-7. Introduce a filter for searching by city name
+1. Create a new angular project
+2. Use the open weather API to retrieve weather information on at least 10 cities
+3. Populate a table within the app with this data
+4. Introduce configurable pagination (rows of 5, 10, 20)
+5. Introduce sortable columns
+6. Introduce a filter for searching by city name
+
+## Additional Tasks
+You may be asked to complete one or more of these additional tasks:
+-Write  or describe some unit tests
+-Create a graph that displays the median average global temperature and plot cities available in the API above/below the median
+-Try to use semantic and accessible HTML with SCSS or LESS
 
 # Open weather API
 
