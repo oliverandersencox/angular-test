@@ -14,9 +14,10 @@ This project will likely take up to two hours. You are not timed and can take as
 
 ## Additional Tasks
 You may be asked to complete one or more of these additional tasks:
--Write  or describe some unit tests
--Create a graph that displays the median average global temperature and plot cities available in the API above/below the median
--Try to use semantic and accessible HTML with SCSS or LESS
+
+	-Write  or describe some unit tests
+	-Create a graph that displays the median average global temperature and plot cities available in the API above/below the median
+	-Try to use semantic and accessible HTML with SCSS or LESS
 
 # Open weather API
 
