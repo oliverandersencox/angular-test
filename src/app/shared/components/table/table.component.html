@@ -1,0 +1,56 @@
+<div class="table-wrapper px-4 py-2">
+
+      
+  <div class="table-scroll">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">City</th>
+              <th scope="col">Date</th>
+              <th scope="col">Weather</th>
+              <th scope="col">Temp</th>
+              <th scope="col">Min</th>
+              <th scope="col">Max</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of displayItems; let i = index">
+              <td>{{ item.dt_txt | slice:0:10 }}</td>
+              <td>{{item.weather[0].description }}</td>
+              <td>{{ item.main.temp }}</td>
+              <td>{{ item.main.temp_min }}</td>
+              <td>{{ item.main.temp_max }}</td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+
+  <div class="d-flex flex-row align-items-center">
+      <p class="mb-0">Show results:</p>
+      <a class="btn" [ngClass]="{'text-primary' : pageSize === 5}" (click)="setPageSize(5)">5</a> /  
+      <a class="btn" [ngClass]="{'text-primary' : pageSize === 10}" (click)="setPageSize(10)">10</a> /  
+      <a class="btn" [ngClass]="{'text-primary' : pageSize === 50}" (click)="setPageSize(50)">50</a>
+    </div>
+
+  <ul *ngIf="pager.pages && pager.totalItems" class="pagination">
+      <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+          <a class="page-link" (click)="setPage(1)">First</a>
+      </li>
+      <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+          <a class="page-link" (click)="setPage(pager.currentPage - 1)">Previous</a>
+      </li>
+      <li class="page-item" *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+          <a  class="page-link" (click)="setPage(page)">{{page}}</a>
+      </li>
+      <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+          <a class="page-link" (click)="setPage(pager.currentPage + 1)">Next</a>
+      </li>
+      <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+          <a class="page-link" (click)="setPage(pager.totalPages)">Last</a>
+      </li>
+  </ul>
+
+  
+
+  <!-- <ngb-pagination [collectionSize]="items.length" [(page)]="page" aria-label="Default pagination" (pageChanged)="pageChange($event)"></ngb-pagination> -->
+</div>

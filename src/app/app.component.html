@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid d-flex flex-column">
+  <!-- <router-outlet></router-outlet> -->
+
+  <div class="content d-flex align-items-center flex-grow-1">
+
+    <div class="banner-image" *ngIf="!currentCity">
+      <div class="con d-flex justify-content-center align-items-center">
+        <h1 class="display-1 text-light">Angular Weather</h1>
+      </div>
+      <img src="https://alpineesc-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/Title-Banner-Weather.jpg" />
+    </div>
+
+    <div class="banner-image" *ngIf="currentCity">
+
+      <img [src]="currentCity.image" />
+      <div class="row con">
+        <div class="col-lg-6 col-sm-12">
+          <app-weather-box *ngIf="cityData" [weather]="cityData"></app-weather-box>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <app-table *ngIf="forecast.length" [items]="forecast"></app-table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="d-flex flex-row cities flex-shrink-0 px-4">
+    <div class="d-flex justify-content-center align-items-center item" *ngFor="let city of cities | async | filter: searchedCities" (click)="select(city)">
+      <app-panel [city]="city.name" [image]="city.icon"></app-panel>
+    </div>
+  </div>
+</div>
